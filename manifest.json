@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Sentiment Analyzer",
+    "version": "1.0",
+    "description": "Analyzes the sentiment of selected text using Gemini 2.0 Flash.",
+    "permissions": [
+      "storage",
+      "scripting",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "192": "icons/icon192.png"
+      }
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "192": "icons/icon192.png"
+    },
+    "options_page": "options.html"
+  }
