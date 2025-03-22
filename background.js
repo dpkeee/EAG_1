@@ -26,7 +26,7 @@ function analyzeSentiment(selectedText, apiKey) {
     },
     body: JSON.stringify({
       contents: [{
-        parts: [{ text: `Analyze the sentiment of this text: ${selectedText}` }]
+        parts: [{ text: `In 1-2 sentences, what is the sentiment expressed in this text?: ${selectedText}` }]
       }]
     })
   })
